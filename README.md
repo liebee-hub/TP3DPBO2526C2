@@ -170,49 +170,13 @@ Hitungan biaya di data contoh:
 | R002: Sari, PS5 VR, 2 jam | (10.000 + 3.000) x 2 = 26.000, tanpa diskon | Rp 26.000 |
 | R003: Dimas, PS5 non-VR, 4 jam | 10.000 x 4 = 40.000, diskon member 10% | Rp 36.000 |
 
-## Struktur Folder
-
-```
-.
-├── CPP
-│   ├── Program
-│   └── Dokumentasi
-├── Python
-│   ├── Program
-│   └── Dokumentasi
-├── Java
-│   ├── Program
-│   └── Dokumentasi
-└── README.md
-```
-
-## Cara Menjalankan
-
-**C++** (compile `Main.cpp` saja, file lain ikut lewat `#include`)
-```bash
-cd CPP/Program
-g++ Main.cpp -o Main
-./Main
-```
-Di Windows: `g++ Main.cpp -o Main.exe` lalu `Main.exe`.
-
-**Python**
-```bash
-cd Python/Program
-python main.py
-```
-
-**Java**
-```bash
-cd Java/Program
-javac *.java
-java Main
-```
 
 ## Dokumentasi
 
 ### C++
-![Output C++](CPP/Dokumentasi/cpp.png)
+<img width="717" height="847" alt="ss cpp tp3" src="https://github.com/user-attachments/assets/cd108cc7-2c2f-493b-91c2-708d5c9405d3" />
+
 
 ### Python
-![Output Python](Python/Dokumentasi/python.png)
+<img width="717" height="856" alt="ss python tp3" src="https://github.com/user-attachments/assets/38a2d8ba-2c9f-48f9-89e3-a1ecb5a16772" />
+
