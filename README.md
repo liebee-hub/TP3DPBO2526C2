@@ -2,92 +2,15 @@
 
 ## Janji
 
-Saya [NAMA LENGKAP] dengan NIM [NIM] mengerjakan Tugas Praktikum 3 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+Saya Refan Maher Aysel dengan NIM 2509129 mengerjakan Tugas Praktikum 3 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ## Tentang Program
 
-Program ini mensimulasikan rental PlayStation. Di dalamnya ada daftar konsol (PS3, PS4, PS5), data pelanggan, dan transaksi sewa lengkap dengan total biayanya. Pelanggan member dapat diskon 10%, dan PS5 yang punya VR kena biaya tambahan Rp 3.000 per jam. Program dibuat dalam tiga bahasa: C++, Python, dan Java (bonus).
+Program ini mensimulasikan rental PlayStation. Di dalamnya ada daftar konsol (PS3, PS4, PS5), data pelanggan, dan transaksi sewa lengkap dengan total biayanya. Pelanggan member dapat diskon 10%, dan PS5 yang punya VR kena biaya tambahan Rp 3.000 per jam. Program dibuat dalam dua bahasa: C++, Python.
 
 ## Desain Diagram Program
 
-```mermaid
-classDiagram
-    class Console {
-        <<abstract>>
-        #consoleId : string
-        #name : string
-        #hourlyRate : int
-        #available : bool
-        +getConsoleType()* string
-        +calculateCost(hours) int
-        +isAvailable() bool
-        +setAvailable(status)
-        +display()
-    }
-    class PS3 {
-        -hddSizeGB : int
-        +getConsoleType() string
-        +display()
-    }
-    class PS4 {
-        -controllerCount : int
-        +getConsoleType() string
-        +display()
-    }
-    class PS5 {
-        -supportsVR : bool
-        +getConsoleType() string
-        +calculateCost(hours) int
-        +display()
-    }
-    class Customer {
-        -customerId : string
-        -name : string
-        -phone : string
-        -isMember : bool
-        +getDiscountRate() double
-        +display()
-    }
-    class RentalPeriod {
-        -startHour : int
-        -durationHours : int
-        +getEndHour() int
-        +getDurationHours() int
-        +display()
-    }
-    class Rental {
-        -rentalId : string
-        -customer : Customer
-        -console : Console
-        -period : RentalPeriod
-        -totalCost : int
-        +calculateTotal() int
-        +finish()
-        +display()
-    }
-    class RentalShop {
-        -shopName : string
-        -consoles : Console[]
-        -customers : Customer[]
-        -rentals : Rental[]
-        +addConsole(console)
-        +addCustomer(customer)
-        +rentConsole(customerId, consoleId, startHour, hours) bool
-        +printAll()
-    }
-
-    Console <|-- PS3
-    Console <|-- PS4
-    Console <|-- PS5
-    Rental *-- RentalPeriod : composition
-    Rental o-- Customer : aggregation
-    Rental o-- Console : aggregation
-    RentalShop "1" o-- "*" Console
-    RentalShop "1" o-- "*" Customer
-    RentalShop "1" *-- "*" Rental : composition
-```
-
-Keterangan panah: `<|--` inheritance, `*--` composition (diamond hitam), `o--` aggregation (diamond putih).
+<img width="797" height="757" alt="tp3 diagram design" src="https://github.com/user-attachments/assets/1faa3c93-745b-43b2-8a7f-9f10b99aca31" />
 
 ## Penjelasan Atribut dan Method
 
